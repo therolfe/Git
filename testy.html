@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Quick Start Guide Example</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
+  <div id="mapid" style="width: 1100px; height: 700px"></div>
+
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+      <script src="Leaflet.CountrySelect.js"></script>
+  <script>
+
+    var mymap = L.map('mapid').setView([51.505, -12.09], 5);
+
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>' ,
+      id: 'mapbox.streets'
+    }).addTo(mymap);
+
+    var myIcon = L.icon({
+        iconUrl: 'http://maps.google.com/mapfiles/kml/shapes/ferry.png',
+
+        iconSize: [40, 40],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        //shadowUrl: 'my-icon-shadow.png',
+        //shadowRetinaUrl: 'my-icon-shadow@2x.png',
+        //shadowSize: [68, 95],
+        //shadowAnchor: [22, 94]
+    });
+
+    L.marker([5.8331,118.1331]).addTo(mymap)        .bindPopup('<b>Sarinto 1</B><BR><B>Date:</B>11-APR-04<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Attacked near Taganak Island, S Philippines, 11 Apr 2004.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.3831,113.9831]).addTo(mymap)        .bindPopup('<b>Zara 3</B><BR><B>Date:</B>16-AUG-05<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Believed hijacked by pirates in Indonesian waters 16 Aug 2005. One crew member found drifting in a liferaft 17 Aug. Vessel not located.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([14.5,52]).addTo(mymap)        .bindPopup('<b>Eide Trader</B><BR><B>Date:</B>23-MAY-09<BR><B>Type:</b>Barge Carrier<BR><B> Incident Description:</B>Attacked by pirates in Gulf of Aden 23 May 2009. Attacked thwarted by sailors from frigate Admiral Panteleyev. Proceeded on voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.8,44.9667]).addTo(mymap)        .bindPopup('<b>Pompei</B><BR><B>Date:</B>18-APR-09<BR><B>Type:</b>Hopper Barge<BR><B> Incident Description:</B>Hijacked by pirates in Aden Bay 18 Apr 2009. Vessel, under the control of pirates, is bound for El Guneri (Haradheere). Ransom of $2.8M agreed 23 Jun. Vessel and crew reported released 28 Jun.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2.8167,104.1833]).addTo(mymap)        .bindPopup('<b>Sulayyah</B><BR><B>Date:</B>06-FEB-10<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Rptd missing 06 Feb 2010 & believed hijacked off Pulau Tioman. Bottom damage being repaired at PT Delta Shipyard, Batam Island.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.4167,104.3]).addTo(mymap)        .bindPopup('<b>PU 3316</B><BR><B>Date:</B>21-APR-10<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Hijacked in 04 25.5N, 104 18.92E at 2328, 19 Apr. The autorities of Brunei, Philippines & Indo have been alerted to lookout for the vessels. Located in 04 29.9N 104 56.8E 20 Apr.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([3.9667,103.4333]).addTo(mymap)        .bindPopup('<b>PU 3309</B><BR><B>Date:</B>27-APR-10<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>While in tow of barge PU 2409, attacked by pirates 78 nautical miles off Kuantan 27 Apr 2010. Pirates boarded the PU 2409 and proceeded to loot the vessel of valuables. Master managed to free himself and proceeded to Dungun.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.2333,104.1]).addTo(mymap)        .bindPopup('<b>Kreuz 331</B><BR><B>Date:</B>15-MAY-11<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Boarded by pirates in 01 14.97 N 104 06.81 E, 15 May 2011. Containers broken into, & ropes stolen. All 15 crew safe.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.3167,103.45]).addTo(mymap)        .bindPopup('<b>Hai Hang 1</B><BR><B>Date:</B>13-DEC-11<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Attacked by pirates while in tow of tug RM Jaya abt 6.4 nautical miles SW of Pulau Kukup, Malaysia, 13 Dec 2011. Items stolen before pirates escaped.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.1,7]).addTo(mymap)        .bindPopup('<b>Jascon 33</B><BR><B>Date:</B>04-AUG-12<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Attacked while stationary abt 30 nm off Bonny Fairway Buoy, S of the Okwori oil field,  04 Aug 2012. 27 crew on board. Two naval guards killed & two wounded. Four people kidnapped.<BR><B>No of dead</B>: 2').openPopup();
+    L.marker([14.5833,120.9667]).addTo(mymap)        .bindPopup('<b>Woodman 39</B><BR><B>Date:</B>27-JUL-12<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Hijacked off Balabac Is, Philippines, 27 Jul 2012. Crew made to leave vessel & picked up off Datu Blah Sinsuat 31 Jul. Found at Gen San Shipyard, Sitio Bawing, Sarangani Province 03 Aug. Still there 23 Oct. Unclaimed by owners 27 May 2013.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.4167,7.4667]).addTo(mymap)        .bindPopup('<b>Saint Patrick</B><BR><B>Date:</B>14-MAY-13<BR><B>Type:</b>Crane Barge<BR><B> Incident Description:</B>Attacked by pirates 3 nautical miles NW of Idoho field, Nigeria, in 04 25 N 07 28 E, 14 May 2013.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2.1333,108.75]).addTo(mymap)        .bindPopup('<b>Highline 22</B><BR><B>Date:</B>24-JAN-13<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Boarded by pirates abt 20 nautical miles WNW of Pulau Merundung Island, in 02 08 N 108 45 E, 24 Jan 2013. Goods stolen.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-4.7833,11.8333]).addTo(mymap)        .bindPopup('<b>Geocean Protis</B><BR><B>Date:</B>14-MAR-15<BR><B>Type:</b>Barge<BR><B> Incident Description:</B>Robbers reportedly boarded the anchored pontoon unnoticed by the ships crew at Pointe Noire outer anchorage 14 Mar 2015. They broke open the store room, stole ships property and escaped. The incident was detected the next morning. <BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.9,102.35]).addTo(mymap)        .bindPopup('<b>Steel Andronikos</B><BR><B>Date:</B>10-AUG-00<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by Pirates in Bay of Bengal, in 01 54 N 102 21 E, 10 Aug 2000. Cash and personal items stolen. No injuries.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.7,100.5667]).addTo(mymap)        .bindPopup('<b>Rui Bo</B><BR><B>Date:</B>09-AUG-01<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by Pirates while alongside Wharf 21D, Bangkok, 09 Aug 2001. Two GPS sets and one pair binoculars stolen. No injuries.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.75,-50.5]).addTo(mymap)        .bindPopup('<b>South Hill 2</B><BR><B>Date:</B>17-JUN-02<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by pirates in 11 45 N 50 30 W, 17 Jun 2002. Pirates still on board 21 Jun and in contact with owners demanding ransom. Released abt 04 Jul. Ransom paid for release. Proceeding to India.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12,-51.5]).addTo(mymap)        .bindPopup('<b>Trader</B><BR><B>Date:</B>13-MAR-03<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by pirates in 12 00 N 51 30 W 13 Mar 2003. Pirates left without being able to hijack the vessel.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-0.5,117.15]).addTo(mymap)        .bindPopup('<b>Rosina Topic</B><BR><B>Date:</B>12-JAN-04<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by four armed attackers at Samarinda 12 Jan 2004. Alarm sounded and pirates fled.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.2667,103.8331]).addTo(mymap)        .bindPopup('<b>Guo Yuan 9</B><BR><B>Date:</B>03-FEB-04<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Crew foiled an attempt by pirates to board vessel in the Singapore Straits 03 Feb 2004. Ar Singapore same day.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.2667,103.8331]).addTo(mymap)        .bindPopup('<b>ZOSCO Ningbo</B><BR><B>Date:</B>29-JAN-04<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by pirates in the Singapore Straits, near Karimun Island, Indonesia, 29 Jan 2004. Stole cash and valuables worth $3,000. No injuries. Ar Singapore same day.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([6.4331,3.4]).addTo(mymap)        .bindPopup('<b>Med</B><BR><B>Date:</B>13-NOV-05<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates 15 nautical miles outside Lagos 13 Nov 2005.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([29.7167,48.6331]).addTo(mymap)        .bindPopup('<b>Shi Dai 5</B><BR><B>Date:</B>19-NOV-05<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Reported boarded by pirates in 29 43.5 N 48 38 E, 19 Nov 2005. Pirates entered masters cabin and stole property. No injuries.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([30.5,47.8167]).addTo(mymap)        .bindPopup('<b>Stellar Unicorn</B><BR><B>Date:</B>16-JUN-05<BR><B>Type:</b>Bulk Ore Carrier<BR><B> Incident Description:</B>Attacked by pirates near Basra Terminal 16 Jun 2005. Pirates fled in speedboat.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([22.322,91.8173]).addTo(mymap)        .bindPopup('<b>Rayna</B><BR><B>Date:</B>16-AUG-07<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Raided by Coast Guard at Chittagong outer anchorage 16 Aug 2007. Seven pirates on board were arrested. Sd Chittagong 25 Aug.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.5667,52.8333]).addTo(mymap)        .bindPopup('<b>MG Shipping</B><BR><B>Date:</B>21-APR-08<BR><B>Type:</b>Bulk Ore Carrier<BR><B> Incident Description:</B>Attacked by rockets from an unidentified vessel off Yemen 21 Apr 2008. Damaged to stern. Some fuel leaking. No injuries to crew. Ar Aden 22 Apr for inspection and repairs. Sailed 30 Apr after completion of repairs. Ar Fujairah anch 04 May.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.67,7.1067]).addTo(mymap)        .bindPopup('<b>Spar Gemini</B><BR><B>Date:</B>15-JUL-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by 10 armed pirates near Port Harcourt 15 Jul 2008. Pirates left & crew regained control of vessel same day. Some crew injured. Some items stolen.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2,48]).addTo(mymap)        .bindPopup('<b>Panos Creation</B><BR><B>Date:</B>18-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by pirates off Somalia 18 Sep 2008. Being taken to Eyl, Somalia. Released 19 Nov. Proceeding to Abu Dhabi. Anchored Fujairah Anchorage 26 Nov.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.6167,46.0333]).addTo(mymap)        .bindPopup('<b>Arcturus</B><BR><B>Date:</B>18-NOV-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Rptd 18 Nov 2008 narrowly escaped being hijacked by Somali pirates in Gulf of Aden. Pirates fled after sighting Naval vessel.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11,47]).addTo(mymap)        .bindPopup('<b>Teval</B><BR><B>Date:</B>18-NOV-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by pirates in Gulf of Aden 18 Nov 2008. Reported 10 Jan 2009 released.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.3833,44.0333]).addTo(mymap)        .bindPopup('<b>Bright Ruby</B><BR><B>Date:</B>10-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by pirates in the Gulf of Aden off the coast of Somalia 10 Sep 2008. 21 crew on board. All crew released 16 Oct. Ard Colombo Oct 24 & sd Oct 25.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.6667,48.3667]).addTo(mymap)        .bindPopup('<b>Sirina</B><BR><B>Date:</B>10-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in the Gulf of Aden in 12 04 N 48 22 E 10 Sep 2008. Crew of vessel fought back and vessel escaped. Continued on voyage to Port Said.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2,48]).addTo(mymap)        .bindPopup('<b>Markand</B><BR><B>Date:</B>21-AUG-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by pirates off Somalia 21 Aug 2008. Still held 15 Sep, ransom demanded. Released about 10 Oct. Berthed at Rotterdam 11 Nov.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.9667,50.75]).addTo(mymap)        .bindPopup('<b>Stella Maris</B><BR><B>Date:</B>20-JUL-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Seized by pirates near Calula, Somalia, 20 Jul 2008. Crew unharmed. Released 26 Sep after ransom paid. Ar Salalah 17 Oct.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.8,44.9667]).addTo(mymap)        .bindPopup('<b>Capt. Stefanos</B><BR><B>Date:</B>21-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Armed Somali pirates hijacked vessel off the coast of Somalia 21 Sep 2008. Released 08 Dec, all crew safe & heading for Brindisi.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2.0167,45.35]).addTo(mymap)        .bindPopup('<b>Pictor</B><BR><B>Date:</B>08-AUG-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off Somali coast 08 Aug 2008. Pirates fled. Passed Bad el Mandeb Strait 09 Aug.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2.0167,45.35]).addTo(mymap)        .bindPopup('<b>African Sanderling</B><BR><B>Date:</B>15-OCT-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by heavily armed men off Somalia 15 Oct 2008. Vessel and crew released 13 Jan 2009.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([3.6333,43.45]).addTo(mymap)        .bindPopup('<b>Rapier</B><BR><B>Date:</B>16-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off Somalia 16 Sep 2008. Subsequently passed Port Said 21 Sep.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([10,40]).addTo(mymap)        .bindPopup('<b>Star Julia</B><BR><B>Date:</B>11-NOV-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off Yemen 11 Nov 2008. Crew took evasive action and vessel continued voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.8,44.9667]).addTo(mymap)        .bindPopup('<b>Sheng Ming</B><BR><B>Date:</B>11-NOV-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked  by Somali pirates in Gulf of Aden 11 Nov 2008. Pirates engaged by Indian commandoes and forced to flee.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5,48]).addTo(mymap)        .bindPopup('<b>Wadi Alarab</B><BR><B>Date:</B>25-DEC-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in Gulf of Aden 25 Dec 2008. Pirates repelled by German warship. 1 crew member shot in leg.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.5,47.8333]).addTo(mymap)        .bindPopup('<b>Yasa Neslihan</B><BR><B>Date:</B>29-OCT-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Captured by pirates in Aden Bay 29 Oct 2008. Ransom demanded. Still held 11 Dec, negotiations under way. Freed 06 Jan 2009 and resumed voyage for China.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([7,51]).addTo(mymap)        .bindPopup('<b>Centauri</B><BR><B>Date:</B>18-SEP-08<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off coast of Somalia 18 Sep 2008. Boarded by 5 armed pirates. Being taken to Eyl, Somalia. Freed 27 Nov. Ar Mombasa 03 Dec.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5333,48.1333]).addTo(mymap)        .bindPopup('<b>ABM Leader</B><BR><B>Date:</B>12-FEB-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Pirates attempted to hijack vsl in Gulf of Aden 12 Feb 2009. Pirates driven off by Spanish warship.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.05,46.0333]).addTo(mymap)        .bindPopup('<b>Yan Dang Hai</B><BR><B>Date:</B>26-FEB-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off the coast of Somalia 26 Feb 2009. 2 crew slightly injured. Ships crew used fire hoses to keep pirates away. Danish naval vessel Absalon boarded the pirate skiff.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([10.65,54.8333]).addTo(mymap)        .bindPopup('<b>Ocean Diamond</B><BR><B>Date:</B>11-FEB-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Fired at by pirates in 10 39N 54 50E, 11 Feb 2009. Small fire reported in accommodation area which extinguished by crew. Increased speed and proceeded to Maputo, arriving 20 Feb. Sailed 22 Feb.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.6058,47.0295]).addTo(mymap)        .bindPopup('<b>Saldanha</B><BR><B>Date:</B>22-FEB-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded and hijacked by pirates in Gulf of Aden, in 12 36.21 N 47 01.46 E, 22 Feb 2009. Still held 17 Apr, negotiations ongoing. Held near Garacad. Released 25 Apr.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.4167,49.1667]).addTo(mymap)        .bindPopup('<b>Anny Petrakis</B><BR><B>Date:</B>07-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in red sea 07 May 2009. Pirates captured by Spanish warship.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([6.3264,3.3619]).addTo(mymap)        .bindPopup('<b>Sao Jose</B><BR><B>Date:</B>28-JUN-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Reported under attack from pirates  in Lagos area 28 Jun 2009. Three crew suffered minor injuries and being taken ashore to hospital. Situation on vessel normal later same day. Ar Apapa Lagos 05 Jul.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.6167,47.3833]).addTo(mymap)        .bindPopup('<b>Elgiznur Cebi</B><BR><B>Date:</B>14-AUG-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in Aden Bay in 12 37 N 47 23 E 14 Aug 2009. Helicopter from a German warship repelled pirates & vessel resumed voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5333,48.1344]).addTo(mymap)        .bindPopup('<b>Irene E.M.</B><BR><B>Date:</B>14-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by pirates 100 miles S of Mukalla, Yemen, 14 Apr 2009. Still being held 27 Aug. Freed 14 Sep after $2 million paid.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.0167,53.1333]).addTo(mymap)        .bindPopup('<b>Gokcan</B><BR><B>Date:</B>11-JUN-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in southern part of Aden bay 11 Jun 2009. Continued on voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.9833,48.1833]).addTo(mymap)        .bindPopup('<b>Red Sea Spirit</B><BR><B>Date:</B>20-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates 35 miles off Balhaf 20 Nov 2009. Took evasive measures & proceeded.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12,49]).addTo(mymap)        .bindPopup('<b>Panamax Anna</B><BR><B>Date:</B>13-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in Gulf of Aden 13 Apr 2009. No attempt to board vessel, which proceeded.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([15.35,47.2]).addTo(mymap)        .bindPopup('<b>Atlantica</B><BR><B>Date:</B>20-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Vessel managed to fend off pirates in the Gulf of Aden 20 Apr 2009. The vessel increased speed and used other unspecified anti-piracy measures.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.0734,48.0517]).addTo(mymap)        .bindPopup('<b>Marsi</B><BR><B>Date:</B>26-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Fired on by pirates in Gulf of Aden 26 May 2009. Warship & helicopter proceeded to scene & halted the attack. Navy arrested 7 pirates.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-0.6164,62.6823]).addTo(mymap)        .bindPopup('<b>Filitsa</B><BR><B>Date:</B>09-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked by pirates in 00 35 S 62 40 E, 09 Nov 2009. Released 01 Feb 2010 after ransom paid & proceeded to Mombasa. All crew safe.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([6.45,3.3833]).addTo(mymap)        .bindPopup('<b>Silvretta</B><BR><B>Date:</B>01-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attakced by pirates off Lagos harbour end of October 2009. Crew were threatened and computers were stoilen. Raid lasted 2 hours.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.0717,48.0522]).addTo(mymap)        .bindPopup('<b>Maud</B><BR><B>Date:</B>28-MAY-09<BR><B>Type:</b>Combined Bulk And Oil Carrier<BR><B> Incident Description:</B>Attacked by pirates in Gulf of Aden 28 May 2009. Pirates chased off by Indian Navy.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5333,48.1344]).addTo(mymap)        .bindPopup('<b>Ulusoy-8</B><BR><B>Date:</B>20-MAR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in Aden Bay 20 Mar 2009. Pirates warned off; no damage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([8.0833,58.7167]).addTo(mymap)        .bindPopup('<b>Temara</B><BR><B>Date:</B>10-MAR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Fired on by pirates abt 500 km off East Africa, in 08 05 N 58 43 E, 10 Mar 2009. Windows in accommodation block shattered. Attack unsuccessful, vessel continued voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([13.0739,48.0519]).addTo(mymap)        .bindPopup('<b>Horizon 1</B><BR><B>Date:</B>08-JUL-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Vessel experienced a piracy attack and hijacked in Aden Bay 08 Jul 2009. Warship Gediz on scene. Still held by pirates at Eyl 07 Sep, ransom demand received. Rptd 29 Sep agreement reached. Freed 05 Oct after ransom was paid.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([4.7686,7.005]).addTo(mymap)        .bindPopup('<b>Sao Jose</B><BR><B>Date:</B>03-AUG-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by armed assailants while off Port Harcourt 01 Sep 2009. Two crew members slightly wounded. Vessel approaching port.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.8333,49.1833]).addTo(mymap)        .bindPopup('<b>Xin Yuan</B><BR><B>Date:</B>09-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates N of port of Bosaso 09 Apr 2009. Pirates chased vessel for abt 1 hour but unable to board.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5333,50.1667]).addTo(mymap)        .bindPopup('<b>Liberty Sun</B><BR><B>Date:</B>15-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off Somalia 15 Apr 2009. Small arms and rocket damage. Arrived Mombasa 16 Apr.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.5,50.5]).addTo(mymap)        .bindPopup('<b>Saint Dionysis</B><BR><B>Date:</B>25-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked and seized by pirates 150 nautical miles from Mukalla 25 Apr 2009. Released 19 May.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12,46]).addTo(mymap)        .bindPopup('<b>Horizon 1</B><BR><B>Date:</B>19-MAR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in Aden Bay 19 Mar 2009.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.6667,43.25]).addTo(mymap)        .bindPopup('<b>Titan</B><BR><B>Date:</B>19-MAR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Seized by pirates in Aden Bay 19 Mar 2009. Still seized 05 Apr. Reported 16 Apr released.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-4.1833,60.8]).addTo(mymap)        .bindPopup('<b>IVS Cabernet</B><BR><B>Date:</B>01-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in 04 11 S 60 48 E 01 May 2009. Slight damage to main deck caused by firearms. Escaped and continuing voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([1.2667,103.8333]).addTo(mymap)        .bindPopup('<b>Good Luck</B><BR><B>Date:</B>31-AUG-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates while anchored 2.5 nautical miles west of Pulau Nipa 30 Aug 2009. Armed men attempted to board vessel but crew alerted and pirates fled.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([11.5,48.0333]).addTo(mymap)        .bindPopup('<b>Amira</B><BR><B>Date:</B>13-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off the coast of Yemen 13 May 2009. Rescued by naval vessel who subsequently arrested 17 pirates.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5667,48.15]).addTo(mymap)        .bindPopup('<b>Postojna</B><BR><B>Date:</B>04-JUN-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in the Gulf of Aden 04 Jun 2009. Repelled by Indian Navy.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-7.6167,51.25]).addTo(mymap)        .bindPopup('<b>Ariana</B><BR><B>Date:</B>02-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hijacked northwest of Seychelles islands 02 May 2009. Rptd 08 May ransom demanded. Ransom agreement agreed 29 Oct. Ransom paid & freed 10 Dec. Rptd. 15 Dec adrift awaiting fuel. Rptd 26 Dec being fuelled & checked over.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([14,53]).addTo(mymap)        .bindPopup('<b>Maria K.</B><BR><B>Date:</B>22-MAY-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in the Gulf of Aden 22 May 2009. Attack unsuccessful due to intervention by coalition forces. Continued on voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-4,54]).addTo(mymap)        .bindPopup('<b>Malaspina Castle</B><BR><B>Date:</B>06-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Reported 06 Apr 2009 hijacked by Somali pirates near the Seychelles. Moored 7 nautical miles from Eylt. Still held 17 Apr. Freed 09 May.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([12.5,48.3333]).addTo(mymap)        .bindPopup('<b>Diamond Falcon</B><BR><B>Date:</B>15-MAR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates at Aden Bay 15 Mar 2009.  Vessel increased speed and changed course. Master asked for assistance and received quick response from Turkish warship. Escorted by warship until it entered safe area & continued voyage.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([3.2167,105.4833]).addTo(mymap)        .bindPopup('<b>Ocean Trader I</B><BR><B>Date:</B>23-APR-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Boarded by pirates in 03 13 N 105 29 E 23 Apr 2009. Pirates made off with cash and property of the crew. No damage to the vessel or injuries.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-2.0086,104.75]).addTo(mymap)        .bindPopup('<b>Garnet</B><BR><B>Date:</B>01-JUN-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Robbed by pirates 01 Jun 2009, while anchored off Tanjung Ramunia.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-6.1086,106.8889]).addTo(mymap)        .bindPopup('<b>Florinda</B><BR><B>Date:</B>17-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates off Anambas Islands 17 Nov 2009. Cash & belongings stolen from crew.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-3.3667,59.7333]).addTo(mymap)        .bindPopup('<b>Navios Apollon</B><BR><B>Date:</B>28-DEC-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Rptd 28 Dec 2009 hijacked by pirates north of the Seychelles, in 03 22 S 59 44 E. Ranson paid 27 Feb & freed 28 Feb.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([2,65]).addTo(mymap)        .bindPopup('<b>Minxi</B><BR><B>Date:</B>07-DEC-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Hit by three grenades in attempted piracy attack 900 miles off Somalia 07 Dec 2009. Fire on deck, but evaded capture.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([-6.1667,39.1833]).addTo(mymap)        .bindPopup('<b>Asteris</B><BR><B>Date:</B>05-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Vessel was hijacked north east of the Comoros Islands 05 Nov 2009. Vessel was bound for Zanzibar but is now turning around & was diverted to Somalia. Released after $3.5m ransom paid 17 Dec. Ar Mombasa 22 Dec.<BR><B>No of dead</B>: None').openPopup();
+    L.marker([14.6003,54.2347]).addTo(mymap)        .bindPopup('<b>Full Strong</B><BR><B>Date:</B>12-NOV-09<BR><B>Type:</b>Bulk Carrier<BR><B> Incident Description:</B>Attacked by pirates in 14 36.1 N 54 14.5 E, 12 Nov 2009. Performed evasive manoeuvres & deterred boarding.<BR><B>No of dead</B>: None').openPopup();
+
+
+
+
+    L.circle([51.508, -0.11], 50000, {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("I am a circle.");
+
+    L.polygon([
+      [51.509, -0.08],
+      [51.503, -0.06],
+      [51.51, -0.047]
+    ]).addTo(mymap).bindPopup("I am a polygon.");
+
+
+    var popup = L.popup();
+
+    function onMapClick(e) {
+      map.panTo({lon: 30, lat: 50});
+    }
+
+    mymap.on('click', onMapClick);
+
+  </script>
+<table>
+  <tr>
+    <td>
+<div id="map"></div>
+</td><td>
+<td align = 'center'>
+    <font size=3px face="Arial, Helvetica, sans-serif" color='#47476b'><b><br>Year:</b></font>
+    <select>
+<option value='2015'>2015</option>
+<option value='2014'>2014</option>
+<option value='2013'>2013</option>
+<option value='2012'>2012</option>
+<option value='2011'>2011</option>
+<option value='2010'>2010</option>
+<option value='2009'>2009</option>
+<option value='2008'>2008</option>
+<option value='2007'>2007</option>
+<option value='2006'>2006</option>
+<option value='2005'>2005</option>
+<option value='2004'>2004</option>
+<option value='2003'>2003</option>
+<option value='2002'>2002</option>
+<option value='2001'>2001</option>
+<option value='2000'>2000</option>
+<option value='1999'>1999</option>
+<option value='1998'>1998</option>
+<option value='1997'>1997</option>
+<option value='1996'>1996</option>
+<option value='1995'>1995</option>
+<option value='1994'>1994</option>
+<option value='1993'>1993</option>
+
+</select></td>
+</tr>
+</table>
+</body>
+</html>
