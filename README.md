@@ -14,14 +14,19 @@ I take courses in my own time every few weeks to keep building my knowledge base
 <B>Completed Online Courses - SQL and BI Tools</B><br>
 •	<a href='https://www.udemy.com/tableau10-advanced/learn/v4/overview'>Tableau 10 Advanced Training: Master Tableau in Data Science</a>-<a href='https://www.udemy.com/certificate/UC-EPVZQNLO/'>Completion Cert</a><br>
 •	<a href='https://www.udemy.com/become-an-sql-developer-learn-ssrs-ssis-ssast-sqldw/learn/v4/overview'>Learn SQL Developer Skills from Scratch(SSRS, SSIS, SSAS,T-SQL,Data Warehouse(DW))</a>-<a href='https://www.udemy.com/certificate/UC-8ZK4OXT0/'>Completion Cert</a><br>
-
+<br>
+<B>Completed Online Courses - Microsoft Azure </B><br>
+•	<a href='https://www.udemy.com/70532-azure/learn/v4/overview'>70-532 Developing Microsoft Azure Solutions Certification</a>-<a href='https://www.udemy.com/certificate/UC-8WBN4D0F/'>Completion Cert</a><br>
+<br>  
 
 <B>Current Online Courses</B><br>
-At present I am taking a course in Advanced Tableau as i think this is an important skill set to aquire.<br>
+<br>•	<a href='https://www.udemy.com/70534-azure/learn/v4/overview'>Architecting Microsoft Azure Solutions</a><br><br>  
+Advanced Tableau<br>
 •	<a href='https://www.udemy.com/tableau10-advanced/learn/v4/overview'>Tableau 10 Advanced Training: Master Tableau in Data Science</a><br>
-I am also taking a course in Tensorflow Based machine learning.<br>
+Tensorflow Based machine learning - Pyhthon<br>
 •	<a href='https://www.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python/learn/v4/content'>Complete Guide to TensorFlow for Deep Learning with Python</a>  
-I am also taking course in Microsoft Azure solution design as i think this is an important skill set to aquire.<br>
-•	<a href='https://www.udemy.com/70534-azure/learn/v4/overview'>Architecting Microsoft Azure Solutions</a><br>
-<br>  
+
+
+
+
 
