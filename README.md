@@ -17,13 +17,9 @@ I take courses in my own time every few weeks to keep building my knowledge base
 <br>
 <B>Completed Online Courses - Microsoft Azure </B><br>
 •	<a href='https://www.udemy.com/70532-azure/learn/v4/overview'>70-532 Developing Microsoft Azure Solutions Certification</a>-<a href='https://www.udemy.com/certificate/UC-8WBN4D0F/'>Completion Cert</a><br>
-<br>  
-
-<B>Current Online Courses</B><br>70-534 70-535 Architecting Microsoft Azure Solutions<br>•	<a href='https://www.udemy.com/70534-azure/learn/v4/overview'>Architecting Microsoft Azure Solutions</a><br><br>  
-Advanced Tableau<br>
-•	<a href='https://www.udemy.com/tableau10-advanced/learn/v4/overview'>Tableau 10 Advanced Training: Master Tableau in Data Science</a><br>
-Tensorflow Based machine learning - Python<br>
-•	<a href='https://www.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python/learn/v4/content'>Complete Guide to TensorFlow for Deep Learning with Python</a>  
+<B>Current Online Courses</B><br>70-534 70-535 Architecting Microsoft Azure Solutions<br>•	<a href='https://www.udemy.com/70534-azure/learn/v4/overview'>Architecting Microsoft Azure Solutions</a><br>
+<br> •	<a href='https://www.udemy.com/tableau10-advanced/learn/v4/overview'>Tableau 10 Advanced Training: Master Tableau in Data Science</a>
+<br>•	<a href='https://www.udemy.com/complete-guide-to-tensorflow-for-deep-learning-with-python/learn/v4/content'>Complete Guide to TensorFlow for Deep Learning with Python</a>  
 
 
 
